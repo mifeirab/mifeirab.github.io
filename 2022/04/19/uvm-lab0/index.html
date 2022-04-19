@@ -25,20 +25,21 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="UVM_LAB0 代码1 uvm_compile.sv 1234567891011121314module uvm_compile;  &#x2F;&#x2F; NOTE:: it is necessary to import uvm package and macros  import uvm_pkg::*;  &#96;include &quot;uvm_macros.svh&quot;  initial begin">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/uvm-lab0/image-20220419223542611.png">
-<meta property="og:image" content="http://example.com/uvm-lab0/image-20220419223722171.png">
-<meta property="og:image" content="http://example.com/uvm-lab0/image-20220419224014398.png">
-<meta property="og:image" content="http://example.com/uvm-lab0/image-20220419224941103.png">
-<meta property="og:image" content="http://example.com/uvm-lab0/image-20220419225042115.png">
-<meta property="og:image" content="http://example.com/uvm-lab0/image-20220419225136945.png">
+<meta property="og:image" content="http://example.com/uvm-lab0/20220419223608.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/mifeirab/img_archive/blog_img/20220419223750.png">
+<meta property="og:image" content="http://example.com/uvm-lab0/20220419224016.png">
+<meta property="og:image" content="http://example.com/uvm-lab0/20220419224946.png">
+<meta property="og:image" content="http://example.com/uvm-lab0/20220419225044.png">
+<meta property="og:image" content="http://example.com/uvm-lab0/20220419225139.png">
 <meta property="og:image" content="http://example.com/uvm-lab0/image-20220419225435762.png">
-<meta property="og:image" content="http://example.com/uvm-lab0/image-20220419225541874.png">
-<meta property="og:image" content="http://example.com/uvm-lab0/image-20220419225908761.png">
+<meta property="og:image" content="http://example.com/uvm-lab0/20220419225547.png">
+<meta property="og:image" content="http://example.com/uvm-lab0/20220419225912.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/mifeirab/img_archive/blog_img/image-20220419230647397.png">
 <meta property="article:published_time" content="2022-04-19T14:29:34.000Z">
-<meta property="article:modified_time" content="2022-04-19T14:59:17.754Z">
+<meta property="article:modified_time" content="2022-04-19T15:08:10.428Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/uvm-lab0/image-20220419223542611.png">
+<meta name="twitter:image" content="http://example.com/uvm-lab0/20220419223608.png">
   <!-- Canonical links -->
   <link rel="canonical" href="http://example.com/2022/04/19/uvm-lab0/index.html">
   
@@ -313,31 +314,32 @@
 <p>要求:  </p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> import uvm_pkg::*;</span><br><span class="line"> `include &quot;uvm_macros.svh&quot;</span><br><span class="line">// 必须要包含</span><br></pre></td></tr></table></figure>
 
-<p><img src="/uvm-lab0/image-20220419223542611.png" alt="image-20220419223542611"></p>
+<p><img src="/uvm-lab0/20220419223608.png"></p>
 <p>默认已经编译好了uvm的库。</p>
-<p><img src="/uvm-lab0/image-20220419223722171.png" alt="image-20220419223722171"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/mifeirab/img_archive/blog_img/20220419223750.png"></p>
 <p>其中questa_uvm_pkg 是quest的uvm库</p>
 <p>运行仿真会有导入相关的pkg的信息</p>
-<p><img src="/uvm-lab0/image-20220419224014398.png" alt="image-20220419224014398"></p>
+<p><img src="/uvm-lab0/20220419224016.png"></p>
 <hr>
 <p>代码2 uvm_class_inst.sv</p>
 <figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">module</span> uvm_class_inst;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">import</span> uvm_pkg::*;</span><br><span class="line">  <span class="meta">`<span class="keyword">include</span> &quot;uvm_macros.svh&quot;</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">class</span> top <span class="keyword">extends</span> uvm_component;</span><br><span class="line">    `uvm_component_utils(top)</span><br><span class="line">    <span class="keyword">function</span> <span class="keyword">new</span>(<span class="keyword">string</span> name = <span class="string">&quot;top&quot;</span>, uvm_component parent = <span class="literal">null</span>);</span><br><span class="line">      <span class="keyword">super</span><span class="variable">.new</span>(name, parent);</span><br><span class="line">      `uvm_info(<span class="string">&quot;UVM_TOP&quot;</span>, <span class="string">&quot;SV TOP creating&quot;</span>, UVM_LOW)</span><br><span class="line">    <span class="keyword">endfunction</span></span><br><span class="line">  <span class="keyword">endclass</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="keyword">initial</span> <span class="keyword">begin</span></span><br><span class="line">    top t; </span><br><span class="line">    `uvm_info(<span class="string">&quot;UVM_TOP&quot;</span>, <span class="string">&quot;test started&quot;</span>, UVM_LOW)</span><br><span class="line">    t = <span class="keyword">new</span>(<span class="string">&quot;t&quot;</span>, <span class="literal">null</span>);</span><br><span class="line">    `uvm_info(<span class="string">&quot;UVM_TOP&quot;</span>, <span class="string">&quot;test finished&quot;</span>, UVM_LOW)</span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">endmodule</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <p>仿真运行后在 代码此处打个断点</p>
-<p><img src="/uvm-lab0/image-20220419224941103.png" alt="image-20220419224941103"></p>
+<p><img src="/uvm-lab0/20220419224946.png"></p>
 <p>然后在菜单钟使能local显示窗口用于查看局部变量</p>
-<p><img src="/uvm-lab0/image-20220419225042115.png" alt="image-20220419225042115"></p>
+<p><img src="/uvm-lab0/20220419225044.png"></p>
 <p>可以看到top被例化后</p>
-<p><img src="/uvm-lab0/image-20220419225136945.png" alt="image-20220419225136945"></p>
+<p><img src="/uvm-lab0/20220419225139.png"></p>
 <p>还可以通过选中Class Instance 来查看实例的相关信息。</p>
 <p><img src="/uvm-lab0/image-20220419225435762.png" alt="image-20220419225435762"></p>
 <p>选中后会提示需要仿真的时候添加一个选项</p>
-<p><img src="/uvm-lab0/image-20220419225541874.png" alt="image-20220419225541874"></p>
+<p><img src="/uvm-lab0/20220419225547.png"></p>
 <p>输入以下命令重新仿真</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vsim -novopt work.uvm_class_inst -classdebug </span><br></pre></td></tr></table></figure>
 
 <p>重新仿真后选中相应实例，可以在Class Instance 窗口钟看到对应类所创建的实例</p>
-<p><img src="/uvm-lab0/image-20220419225908761.png" alt="image-20220419225908761"></p>
+<p><img src="/uvm-lab0/20220419225912.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/mifeirab/img_archive/blog_img/image-20220419230647397.png" alt="image-20220419230647397"></p>
 
       
     </div>
