@@ -222,7 +222,7 @@
   <div class="widget">
     <h3 class="widget-title">Archive</h3>
     <div class="widget-body">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">April 2022</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">July 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">April 2022</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -234,6 +234,21 @@
     <div class="widget-body">
       <ul class="recent-post-list list-unstyled no-thumbnail">
         
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/2022/07/17/test2/" class="title">(no title)</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-07-17T15:29:46.279Z" itemprop="datePublished">2022-07-17</time>
+              </p>
+            </div>
+          </li>
+          
           <li>
             
             <div class="item-inner">
@@ -261,113 +276,57 @@
   
   <main class="main" role="main">
   
-  
-    <div class="content">
-  <article id="post-uvm-lab0" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="content article-list">
     
-    <div class="article-header">
-      
-        
+      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="article-header">
+    
+  </div>
+  
+  <p class="article-meta">
+    <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2022/07/17/test2/" class="article-date">
+	  <time datetime="2022-07-17T15:29:46.279Z" itemprop="datePublished">Jul 17</time>
+	</a>
+</span>
+    
+    
+
+    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2022/07/17/test2/#comments" class="article-comment-link">Comments</a></span>
+    
+  </p>
+</article>
+
+    
+      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="article-header">
+    
   
     <h1 itemprop="name">
       <a class="article-title" href="/2022/04/19/uvm-lab0/">uvm_lab0</a>
     </h1>
   
 
-      
-      <div class="article-meta">
-        <span class="article-date">
+  </div>
+  
+  <p class="article-meta">
+    <span class="article-date">
     <i class="icon icon-calendar-check"></i>
 	<a href="/2022/04/19/uvm-lab0/" class="article-date">
-	  <time datetime="2022-04-19T14:29:34.000Z" itemprop="datePublished">2022-04-19</time>
+	  <time datetime="2022-04-19T14:29:34.000Z" itemprop="datePublished">Apr 19</time>
 	</a>
 </span>
-        
-        
-
-        
-
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2022/04/19/uvm-lab0/#comments" class="article-comment-link">Comments</a></span>
-        
-      </div>
-    </div>
-    <div class="article-entry marked-body" itemprop="articleBody">
-      
-        <p>UVM_LAB0</p>
-<p>代码1 uvm_compile.sv</p>
-<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">module</span> uvm_compile;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// <span class="doctag">NOTE:</span>: it is necessary to import uvm package and macros</span></span><br><span class="line">  <span class="keyword">import</span> uvm_pkg::*;</span><br><span class="line">  <span class="meta">`<span class="keyword">include</span> &quot;uvm_macros.svh&quot;</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">initial</span> <span class="keyword">begin</span></span><br><span class="line">    `uvm_info(<span class="string">&quot;UVM&quot;</span>, <span class="string">&quot;Hello, welcome to RKV UVM training!&quot;</span>, UVM_LOW)</span><br><span class="line">    #<span class="number">1</span>us;</span><br><span class="line">    `uvm_info(<span class="string">&quot;UVM&quot;</span>, <span class="string">&quot;Bye, and more gifts waiting for you!&quot;</span>, UVM_LOW)</span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">endmodule</span></span><br></pre></td></tr></table></figure>
-
-<p>要求:  </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> import uvm_pkg::*;</span><br><span class="line"> `include &quot;uvm_macros.svh&quot;</span><br><span class="line">// 必须要包含</span><br></pre></td></tr></table></figure>
-
-<p><img src="/uvm-lab0/20220419223608.png"></p>
-<p>默认已经编译好了uvm的库。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/mifeirab/img_archive/blog_img/20220419223750.png"></p>
-<p>其中questa_uvm_pkg 是quest的uvm库</p>
-<p>运行仿真会有导入相关的pkg的信息</p>
-<p><img src="/uvm-lab0/20220419224016.png"></p>
-<hr>
-<p>代码2 uvm_class_inst.sv</p>
-<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">module</span> uvm_class_inst;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">import</span> uvm_pkg::*;</span><br><span class="line">  <span class="meta">`<span class="keyword">include</span> &quot;uvm_macros.svh&quot;</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">class</span> top <span class="keyword">extends</span> uvm_component;</span><br><span class="line">    `uvm_component_utils(top)</span><br><span class="line">    <span class="keyword">function</span> <span class="keyword">new</span>(<span class="keyword">string</span> name = <span class="string">&quot;top&quot;</span>, uvm_component parent = <span class="literal">null</span>);</span><br><span class="line">      <span class="keyword">super</span><span class="variable">.new</span>(name, parent);</span><br><span class="line">      `uvm_info(<span class="string">&quot;UVM_TOP&quot;</span>, <span class="string">&quot;SV TOP creating&quot;</span>, UVM_LOW)</span><br><span class="line">    <span class="keyword">endfunction</span></span><br><span class="line">  <span class="keyword">endclass</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="keyword">initial</span> <span class="keyword">begin</span></span><br><span class="line">    top t; </span><br><span class="line">    `uvm_info(<span class="string">&quot;UVM_TOP&quot;</span>, <span class="string">&quot;test started&quot;</span>, UVM_LOW)</span><br><span class="line">    t = <span class="keyword">new</span>(<span class="string">&quot;t&quot;</span>, <span class="literal">null</span>);</span><br><span class="line">    `uvm_info(<span class="string">&quot;UVM_TOP&quot;</span>, <span class="string">&quot;test finished&quot;</span>, UVM_LOW)</span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">endmodule</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>仿真运行后在 代码此处打个断点</p>
-<p><img src="/uvm-lab0/20220419224946.png"></p>
-<p>然后在菜单钟使能local显示窗口用于查看局部变量</p>
-<p><img src="/uvm-lab0/20220419225044.png"></p>
-<p>可以看到top被例化后</p>
-<p><img src="/uvm-lab0/20220419225139.png"></p>
-<p>还可以通过选中Class Instance 来查看实例的相关信息。</p>
-<p><img src="/uvm-lab0/image-20220419225435762.png" alt="image-20220419225435762"></p>
-<p>选中后会提示需要仿真的时候添加一个选项</p>
-<p><img src="/uvm-lab0/20220419225547.png"></p>
-<p>输入以下命令重新仿真</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vsim -novopt work.uvm_class_inst -classdebug </span><br></pre></td></tr></table></figure>
-
-<p>重新仿真后选中相应实例，可以在Class Instance 窗口钟看到对应类所创建的实例</p>
-<p><img src="/uvm-lab0/20220419225912.png"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/mifeirab/img_archive/blog_img/image-20220419230647397.png" alt="image-20220419230647397"></p>
-
-      
-    </div>
-    <div class="article-footer">
-      <blockquote class="mt-2x">
-  <ul class="post-copyright list-unstyled">
     
-    <li class="post-copyright-link hidden-xs">
-      <strong>本文链接：</strong>
-      <a href="http://example.com/2022/04/19/uvm-lab0/" title="uvm_lab0" target="_blank" rel="external">http://example.com/2022/04/19/uvm-lab0/</a>
-    </li>
     
-    <li class="post-copyright-license">
-      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
-    </li>
-  </ul>
-</blockquote>
 
+    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2022/04/19/uvm-lab0/#comments" class="article-comment-link">Comments</a></span>
+    
+  </p>
+</article>
 
-<div class="panel panel-default panel-badger">
-  <div class="panel-body">
-    <figure class="media">
-      <div class="media-left">
-        <a href="https://github.com/cofess" target="_blank" class="img-burn thumb-sm visible-lg">
-          <img src="/images/cat.jpg" class="img-rounded w-full" alt="">
-        </a>
-      </div>
-      <div class="media-body">
-        <h3 class="media-heading"><a href="https://github.com/cofess" target="_blank"><span class="text-dark">mifei</span><small class="ml-1x"></small></a></h3>
-        <div>个人简介。</div>
-      </div>
-    </figure>
+    
   </div>
-</div>
-
-
-    </div>
-  </article>
-  
-</div>
-
-  
 
    
 </main>
